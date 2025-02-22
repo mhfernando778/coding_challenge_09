@@ -44,3 +44,26 @@ const mgr1 = new Manager("John Smith", 201, "IT", 8000, 5); // introducing a new
 
 console.log(mgr1.getDetails()); // logging the manager details
 console.log(mgr1.calculateBonus()); // logging the manager annual bonus
+
+
+// Task 3 - Creating a Company Class //
+
+class Company {
+    constructor(name, employees) {
+       this.name = name;
+       this.employees = []; 
+    };
+
+    addEmployee(employee) {
+        this.employees.push(employee);
+    };
+
+    listEmployees() {
+        this.employees.forEach(employee => {console.log(employee.getDetails())});
+    };
+};
+
+const company = new Company("TechCorp");
+company.addEmployee(emp1);
+company.addEmployee(mgr1);
+company.listEmployees();
