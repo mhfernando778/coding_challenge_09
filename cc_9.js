@@ -62,7 +62,7 @@ class Company { // creating a new company class to add employees into
         this.employees.forEach(employee => {console.log(employee.getDetails())});
     };
 
-    calculateTotalPayroll() {
+    calculateTotalPayroll() { // adding a new method for task 4 to calculate total employee payroll
         return this.employees.reduce((total, employee) => total + employee.calculateAnnualSalary(), 0)
     };
 };
@@ -75,6 +75,6 @@ company.listEmployees(); // listing the provided employees
 
 // Task 4 - Implementing a Payroll Sytem //
 
-console.log(`Total Payroll: $${company.calculateTotalPayroll()}`);
+console.log(`Total Payroll: $${company.calculateTotalPayroll()}`); // logging the calculated payroll from the new method added
 
 
