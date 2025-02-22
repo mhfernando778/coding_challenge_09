@@ -21,3 +21,26 @@ const emp1 = new Employee("Alice Johnson", 101, "Sales", 5000); // introducing a
 
 console.log(emp1.getDetails()); // logging the employee details
 console.log(emp1.calculateAnnualSalary()); // logging the employee salary calculation
+
+
+// Task 2 - Creating Manager Class Inheritance //
+
+class Manager extends Employee {
+    constructor(name, id, department, salary, teamSize) {
+        super(name, id, department, salary);
+        this.teamSize = teamSize;
+    };
+
+    getDetails() {
+        return `Manager Name: ${this.name}, Manager ID: ${this.name}, Department: ${this.department}, Salary: $${this.salary}, Team Size: ${this.teamSize}`
+    };
+
+    calculateBonus() {
+        return (this.salary * 12) * .10;
+    };
+};
+
+const mgr1 = new Manager("John Smith", 201, "IT", 8000, 5);
+
+console.log(mgr1.getDetails());
+console.log(mgr1.calculateBonus()); 
