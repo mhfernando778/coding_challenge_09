@@ -61,9 +61,20 @@ class Company { // creating a new company class to add employees into
     listEmployees() { // listing the given employees
         this.employees.forEach(employee => {console.log(employee.getDetails())});
     };
+
+    calculateTotalPayroll() {
+        return this.employees.reduce((total, employee) => total + employee.calculateAnnualSalary(), 0)
+    };
 };
 
 const company = new Company("TechCorp"); // introducing a new company
 company.addEmployee(emp1); // adding an employee
 company.addEmployee(mgr1); // adding a manager
 company.listEmployees(); // listing the provided employees
+
+
+// Task 4 - Implementing a Payroll Sytem //
+
+console.log(`Total Payroll: $${company.calculateTotalPayroll()}`);
+
+
