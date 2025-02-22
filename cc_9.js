@@ -48,22 +48,22 @@ console.log(mgr1.calculateBonus()); // logging the manager annual bonus
 
 // Task 3 - Creating a Company Class //
 
-class Company {
+class Company { // creating a new company class to add employees into
     constructor(name, employees) {
        this.name = name;
        this.employees = []; 
     };
 
-    addEmployee(employee) {
+    addEmployee(employee) { // adding employees into the company class
         this.employees.push(employee);
     };
 
-    listEmployees() {
+    listEmployees() { // listing the given employees
         this.employees.forEach(employee => {console.log(employee.getDetails())});
     };
 };
 
-const company = new Company("TechCorp");
-company.addEmployee(emp1);
-company.addEmployee(mgr1);
-company.listEmployees();
+const company = new Company("TechCorp"); // introducing a new company
+company.addEmployee(emp1); // adding an employee
+company.addEmployee(mgr1); // adding a manager
+company.listEmployees(); // listing the provided employees
