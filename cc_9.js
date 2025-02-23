@@ -66,7 +66,7 @@ class Company { // creating a new company class to add employees into
         return this.employees.reduce((total, employee) => total + employee.calculateAnnualSalary(), 0)
     };
 
-    promoteToManager(employee, teamSize) {
+    promoteToManager(employee, teamSize) { // adding new method for task 5 to convert an employee to manager
         const index = this.employees.indexOf(employee);
         this.employees[index] = new Manager(employee.name, employee.id, employee.department, employee.salary, teamSize)
     };
@@ -85,5 +85,5 @@ console.log(`Total Payroll: $${company.calculateTotalPayroll()}`); // logging th
 
 // Task 5 - Implementing Promotions //
 
-company.promoteToManager(emp1, 3);
-company.listEmployees();
+company.promoteToManager(emp1, 3); // logging the promotion
+company.listEmployees(); // listing the employee information
